@@ -1,21 +1,28 @@
 body {
     padding: 10px;
   }
+
+  * {
+    transition: all 250ms !important;
+  }
   
   .container {
     position: relative;
     width: 398px;
+    margin: auto;
     padding: 10px 40px;
     border: 1px solid #CCC;
     border-radius: 15px;
     background: #eee;
   }
   
-  .container img {
+  .carusel img {
     width: 130px;
     height: 130px;
-    /* делаем этот элемент блочным, чтобы убрать лишнее пространство вокруг картинок */
     display: block;
+    left: 0;
+    top: 2px;
+    position: absolute;
   }
   
   .arrow {
@@ -42,29 +49,26 @@ body {
   
   .prev {
     left: 7px;
+    z-index: 1000;
   }
   
   .next {
     right: 7px;
+    z-index: 1000;
   }
   
+  
+  
   .carusel {
-    width: 390px;
+    height: 130px;
+    width: 388px;
+    margin: 0;
+    padding: 0;
+    transition: margin-left 250ms;
+    transition: margin-right 250ms;
+    font-size: 0;
+    position: relative;
     overflow: hidden;
   }
   
-  .carusel ul {
-    height: 130px;
-    width: 9999px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    transition: margin-left 250ms;
-    /* удаляем пустое пространство между элементами li, у которых установлен inline-block */
-    /* http://davidwalsh.name/remove-whitespace-inline-block */
-    font-size: 0;
-  }
   
-  .carusel li {
-    display: inline-block;
-  }
