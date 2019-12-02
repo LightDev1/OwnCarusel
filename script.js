@@ -19,7 +19,6 @@ const drawPics = () => {
     img.style.left = offSet*130 + 'px';
     slider.appendChild(img);
     
-
     if (step + 1 == slides.length) {
         step = 0;
     }
@@ -56,7 +55,6 @@ const drawPicsRight = () => {
     img.style.left = -(offSet*130) + 390 + 'px';
     slider.prepend(img);
     
-
     if (step + 1 == slides.length) {
         step = 0;
     }
@@ -92,5 +90,6 @@ drawPics();
 drawPics();
 drawPics();
 drawPicsRight();
+
 right.addEventListener('click', move);
 left.addEventListener('click', moveRight);
